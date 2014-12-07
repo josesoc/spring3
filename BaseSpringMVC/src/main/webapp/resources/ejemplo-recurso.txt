@@ -1,0 +1,11 @@
+*** Ejemplo de recurso de texto.
+
+La URL principal es: 
+
+    http://localhost:8080/springmvcbase
+
+En el "servlet-context.xml" (dispatcher) se ha establecido un contexto web para acceso directo a recursos estaticos.
+ 
+Podemos probarlo con la URL:
+
+	http://localhost:8080/springmvcbase/resources/ejemplo-recurso.txt
