@@ -1,0 +1,13 @@
+*** Ejemplo de recurso de texto.
+
+http://www.uv.es/grimo/teaching/SpringMVCv3PasoAPaso/
+
+La URL principal es: 
+
+    http://localhost:8080/springjpabase
+
+En el "servlet-context.xml" (dispatcher) se ha establecido un contexto web para acceso directo a recursos estaticos.
+ 
+Podemos probarlo con la URL:
+
+	http://localhost:8080/springjpabase/resources/ejemplo-recurso.txt
