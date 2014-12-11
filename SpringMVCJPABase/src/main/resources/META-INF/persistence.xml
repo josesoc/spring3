@@ -1,0 +1,27 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0"> 
+
+<!-- 
+
+	JPA implementations have the choice of managing transactions themselves (RESOURCE_LOCAL), 
+	or having them managed by the application server's JTA implementation.
+
+	In most cases, RESOURCE_LOCAL is fine. This would use basic JDBC-level transactions. 
+	The downside is that the transaction is local to the JPA persistence unit, so if you want a 
+	transaction that spans multiple persistence units (or other databases), then RESOURCE_LOCAL 
+	may not be good enough.
+
+	JTA is also used for managing transactions across systems like JMS and JCA, but that's fairly 
+	exotic usage for most of us.
+
+	To use JTA, you need support for it in your application server, and also support from the 
+	JDBC driver.
+
+ -->
+
+  <persistence-unit name="hibernatePersistenceUnit" transaction-type="RESOURCE_LOCAL">
+  		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="none" />
+		</properties>
+  </persistence-unit>
+
+</persistence>

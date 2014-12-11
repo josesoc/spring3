@@ -1,0 +1,18 @@
+- 31/10/2013:
+  Funciona en Tomcat.
+  
+  Para que funcione en Weblogic 12.1.1 he tenido que hacer esto:   
+  
+  	*** net.roseindia.model.Article
+  
+    	@Temporal(TemporalType.DATE)
+		@Column(name = "date_added")
+		private Date addedDate;
+		
+  Parece ser que los tipo Date hay que marcarlos con @Temporal(TemporalType.DATE) para que los 
+  entienda JPA y Weblogic. En Tomcat funciona bien sin ponerle esto.
+
+- 03/06/2013: 
+  Funcionan correctamente las transacciones.
+  Log4j muestra los rollback de las transacciones.
+  
